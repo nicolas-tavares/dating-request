@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Pedido de namoro</title>
+
+</head>
+<body>
+    <div class="center">
+        <h1>você quer namorar comigo?</h1>
+    </div>
+    <div class="img"></div>
+    <div class="btn">
+        <button id="sim" onclick="sim()">claro</button>
+        <button id="nao" onmouseover="desvia(this)">não</button>
+    </div>
+</body>
+
+<script>
+  function sim(){
+        alert("\nParabéns! Você é muito mais feliz agora!!\n");
+    } 
+
+    function desvia(btn){
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10,90);
+        btn.style.left = geraPosicao(10, 90);
+    }
+
+    function geraPosicao(min,max){
+        return (Math.random() * (max-min) + min) + "%";
+    }
+
+    const naoBtn = document.querySelector('#nao');
+    const simBtn = document.querySelector('#sim');
+    const img = document.querySelector('.img');
+
+    simBtn.addEventListener('mouseover', ()=>{
+        img.style.backgroundImage = "url('https://uniquebox.vteximg.com.br/arquivos/ids/158485/pedido-de-namoro_right.png?v=636936274608270000')"
+    });
+    simBtn.addEventListener('mouseout', ()=>{
+        img.style.backgroundImage = "url('https://uniquebox.vteximg.com.br/arquivos/ids/158482/pedido-de-namoro_front.png?v=636936274247270000')"
+    });
+</script>
+
+</html>

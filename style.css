@@ -1,0 +1,66 @@
+body{
+    background-color: #03bb85;
+    overflow: hidden;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: monospace;
+    border-right: 4px solid;
+    width: 25ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(25), blinking 0.5s infinite step-end alternate;
+
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+@keyframes blinking{
+    50%{
+        border-color: transparent;
+    }
+}
+.center{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    margin: 0 20px;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.img{
+    display: block;
+    background-image: url('https://uniquebox.vteximg.com.br/arquivos/ids/158482/pedido-de-namoro_front.png?v=636936274247270000');
+    background-size: cover;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 50%;
+}
